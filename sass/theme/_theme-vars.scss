@@ -27,23 +27,30 @@ $gray-dark:        lighten($black, 50%);
 $gray-darker:      lighten($black, 40%);
 $gray-darkest:     lighten($black, 30%);
 
-$light-blue:       #deeced;  // Block bg color.
-$dark-blue:        #17858c;  // Block bg color.
-$daycare:          rgb(164, 218, 32);  // Daycare color.
-$school:           rgb(144, 29, 124); // School color.
-$youth:            rgb(255, 104, 0);  // Youth color.
-$course:           rgb(237, 215, 28); // Course color.
+$light-blue:       #deeced; // Block bg color.
+$dark-blue:        #17858c; // Block bg color.
+$daycare:          #49C5B1; // Daycare color.
+$school:           #FAE100; // School color.
+$youth:            #1B365D; // Youth color.
+$course:           #71C5E8; // Course color.
+
+
+$header-color:     #1B365D;
+$footer-color:     #808080;
+$block-dark:       #808080;
+$block-light:      #CCCCCC;
 
 /* Typography
    ================================================================================================================== */
 
-$font:             14px/1.3 "Asap", sans-serif;
+$font:             14px/1.3 "Roboto", sans-serif;
 
 /* Link colors
    ================================================================================================================== */
 
-$link-color:       $dark-blue;
-$link-color-hover: darken($link-color, 10%);
+$link-color:       #1B365D;
+$link-color-hover: darken(#1B365D, 10%);
+$button-color: $link-color;
 
 /* Spacing
    ================================================================================================================== */
@@ -59,5 +66,5 @@ $border-radius:    5px;
    ================================================================================================================== */
 
 $boxlist-font-color:    #000;
-$boxlist-border-color:  $green;
+$boxlist-border-color:  $gray-light;
 $boxlist-padding:       1em;
