@@ -8,10 +8,10 @@
 /* Default file: base/_base.scss
 ================================================================================================================== */
 body {
-  background: $dark-blue;
+  background: $footer-color;
+  font: $font;
   color: #333;
 }
-
 
 a {
   &:link {
@@ -88,19 +88,19 @@ a {
     border-color: $dark-blue;
 
     &.is-dagtilbud {
-      border-color: $daycare-color;
+      border-color: $daycare;
     }
 
     &.is-grundskole {
-      border-color: $school-color;
+      border-color: $school;
     }
 
     &.is-ungdomsuddannelse {
-      border-color: $youth-color;
+      border-color: $youth;
     }
 
     &.is-course {
-      border-color: $course-color;
+      border-color: $course;
     }
 
     &.is-profile {
@@ -130,322 +130,330 @@ a {
 /* Default file: modules/_block.scss
 ================================================================================================================== */
 
-.block--dark {
-  background: $block-dark;
-  color: $white;
+.block {
+    &--dark {
+      background: $block-dark;
+      color: $white;
 
-  a {
-    @include strip-link-styles($white, underline);
+      a {
+        @include strip-link-styles($white, underline);
+      }
+    }
+
+    .&--light {
+      background: $block-light;
+
+      a {
+        @include strip-link-styles($link-color, underline);
+      }
+    }
+
+    &--pdf {
+      &-link {
+        @extend %button;
+
+        @include strip-link-styles($white);
+      }
+    }
+
+    .&--newsletter.is-front .form-type-emailfield {
+      & > input {
+        margin-bottom: $boxlist-padding;
+      }
+    }
+
+    &--field-wrapper {
+      border-bottom: 1px solid #fff;
+    }
   }
-}
+  /* Default file: modules/_header.scss
+  ================================================================================================================== */
 
-.block--light {
-  background: $block-light;
-
-  a {
-    @include strip-link-styles($link-color, underline);
-  }
-}
-
-.block--pdf {
-  &-link {
-    @extend %button;
-
-    @include strip-link-styles($white);
-  }
-}
-
-.block--newsletter.is-front .form-type-emailfield {
-  & > input {
-    margin-bottom: $boxlist-padding;
-  }
-}
-
-/* Default file: modules/_header.scss
-================================================================================================================== */
-
-.header {
-  background: url(../images/header-bg.png) repeat-x 0 0;
-  height: 85px;
-
-  @include breakpoint(45em) {
-    height: 160px;
-  }
-
-  &--toggle-mobile-nav {
+  .header {
+    //background: url(../images/header-bg.png) repeat-x 0 0;
     background: none;
-  }
-}
+    background-color: $header-color;
+    height: 85px;
 
-
-/* Default file: modules/_search.scss
-================================================================================================================== */
-.search {
-
-  // Widget display.
-  &--widget {
-    background: $gray-lightest;
-    color: rgba(0, 0, 0, 0.5);
-
-    &.is-daycare,
-    &.is-daycare .search--filter-dropdown,
-    &.is-daycare .search--filter-dropdown-submit,
-    &.is-daycare .search--widget-selected,
-    &.is-daycare .search--filter-search-submit {
-      @include background-set-color('daycare', $transparency: 1);
-
-      border-color: $daycare-color;
+    @include breakpoint(45em) {
+      height: 160px;
     }
 
-    &.is-school,
-    &.is-school .search--filter-dropdown,
-    &.is-school .search--filter-dropdown-submit,
-    &.is-school .search--widget-selected,
-    &.is-school .search--filter-search-submit {
-      @include background-set-color('school', $transparency: 1);
-
-      border-color: $school-color;
-    }
-
-    &.is-youth,
-    &.is-youth .search--filter-dropdown,
-    &.is-youth .search--filter-dropdown-submit,
-    &.is-youth .search--widget-selected,
-    &.is-youth .search--filter-search-submit {
-      @include background-set-color('youth', $transparency: 1);
-
-      border-color: $youth-color;
-    }
-
-    &.is-course,
-    &.is-course .search--filter-dropdown,
-    &.is-course .search--filter-dropdown-submit,
-    &.is-course .search--widget-selected,
-    &.is-course .search--filter-search-submit {
-      @include background-set-color('course', $transparency: 1);
-
-      border-color: $course-color;
-    }
-  }
-
-  &--filter-dropdown-header {
-    padding: 20px 0 16px;
-  }
-
-  &--filter-wrapper-user {
-    background: $gray-darker;
-  }
-
-
-  &--filter-wrapper-inner {
-    background: rgba(255, 255, 255, .85);
-  }
-
-
-  &--filter-search-text[type="text"] {
-    border: 1px solid $gray-light;
-  }
-
-  &--filter-search-submit[type="submit"] {
-    @extend %button;
-
-    padding: .4em 1.5em;
-    max-width: 35%;
-    position: absolute;
-    right: 0;
-  }
-
-
-  // The span filter. Two text fields to span a value.
-  &--filter-span {
-    &-text[type="text"] {
-      border: 1px solid $gray-light;
+    &--toggle-mobile-nav {
+      background: none;
     }
   }
 
 
-  &--filter-label {
-    @include strip-link-styles(rgba(0, 0, 0, 0.5));
-  }
+  /* Default file: modules/_search.scss
+  ================================================================================================================== */
+  .search {
+
+    // Widget display.
+    &--widget {
+      background: $gray-lightest;
+      color: rgba(0, 0, 0, 0.5);
+
+      &.is-daycare,
+      &.is-daycare .search--filter-dropdown,
+      &.is-daycare .search--filter-dropdown-submit,
+      &.is-daycare .search--widget-selected,
+      &.is-daycare .search--filter-search-submit {
+        @include background-set-color('daycare', $transparency: 1);
+
+        border-color: $daycare;
+      }
+
+      &.is-school,
+      &.is-school .search--filter-dropdown,
+      &.is-school .search--filter-dropdown-submit,
+      &.is-school .search--widget-selected,
+      &.is-school .search--filter-search-submit {
+        @include background-set-color('school', $transparency: 1);
+
+        border-color: $school;
+      }
+
+      &.is-youth,
+      &.is-youth .search--filter-dropdown,
+      &.is-youth .search--filter-dropdown-submit,
+      &.is-youth .search--widget-selected,
+      &.is-youth .search--filter-search-submit {
+        @include background-set-color('youth', $transparency: 1);
+
+        border-color: $youth;
+      }
+
+      &.is-course,
+      &.is-course .search--filter-dropdown,
+      &.is-course .search--filter-dropdown-submit,
+      &.is-course .search--widget-selected,
+      &.is-course .search--filter-search-submit {
+        @include background-set-color('course', $transparency: 1);
+
+        border-color: $course;
+      }
+    }
+
+    &--filter-dropdown-header {
+      padding: 20px 0 16px;
+    }
+
+    &--filter-wrapper-user {
+      background: $gray-darker;
+    }
 
 
-  // The filter dropdown for filter lists.
-  &--filter-dropdown {
-    box-shadow: 3px 3px 6px $gray-dark;
-
-    &-inner {
+    &--filter-wrapper-inner {
       background: rgba(255, 255, 255, .85);
     }
 
 
-    &-submit {
+    &--filter-search-text[type="text"] {
+      border: 1px solid $gray-light;
+    }
+
+    &--filter-search-submit[type="submit"] {
       @extend %button;
 
-      display: block;
-      margin: $spacing;
-      font-size: .9em;
-      padding: .1em 2em;
-
-      @include strip-link-styles($white);
+      padding: .4em 1.5em;
+      max-width: 35%;
+      position: absolute;
+      right: 0;
     }
 
-    .disabled {
-      color: rgba(0, 0, 0, 0.2);
+
+    // The span filter. Two text fields to span a value.
+    &--filter-span {
+      &-text[type="text"] {
+        border: 1px solid $gray-light;
+      }
+    }
+
+
+    &--filter-label {
+      @include strip-link-styles(rgba(0, 0, 0, 0.5));
+    }
+
+
+    // The filter dropdown for filter lists.
+    &--filter-dropdown {
+      box-shadow: 3px 3px 6px $gray-dark;
+
+      &-inner {
+        background: rgba(255, 255, 255, .85);
+      }
+
+
+      &-submit {
+        @extend %button;
+
+        display: block;
+        margin: $spacing;
+        font-size: .9em;
+        padding: .1em 2em;
+
+        @include strip-link-styles($white);
+      }
+
+      .disabled {
+        color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    // Mobile show/hide
+    &--widget-filters {
+      background: $gray-lightest;
+    }
+
+    // Selected facets
+    &--widget-selected {
+      background: $white;
+    }
+
+    &--widget-selected-item {
+      //@extend %button;
+
+      background-color: rgba(255, 255, 255, .85);
+      border-color: rgba(255, 255, 255, .85);
+      color: $gray;
+    }
+
+    &--reset {
+      color: $gray-darkest;
     }
   }
 
-  // Mobile show/hide
-  &--widget-filters {
-    background: $gray-lightest;
+  .search-results {
+    &--result {
+      @extend %teaser--wrapper;
+    }
   }
 
-  // Selected facets
-  &--widget-selected {
-    background: $white;
-  }
 
-  &--widget-selected-item {
-    //@extend %button;
-
-    background-color: rgba(255, 255, 255, .85);
-    border-color: rgba(255, 255, 255, .85);
-    color: $gray;
-  }
-
-  &--reset {
+  // Specific texts need dark color.
+  .is-course .search--filter-search-submit,
+  .is-daycare .search--filter-search-submit {
     color: $gray-darkest;
   }
-}
-
-.search-results {
-  &--result {
-    @extend %teaser--wrapper;
-  }
-}
 
 
-// Specific texts need dark color.
-.is-course .search--filter-search-submit,
-.is-daycare .search--filter-search-submit {
-  color: $gray-darkest;
-}
+  /* Default file: modules/_teaser.scss
+  ================================================================================================================== */
 
+  /* Teaser representing a target group. */
+  .teaser--group {
 
-/* Default file: modules/_teaser.scss
-================================================================================================================== */
+    //@include breakpoint(650px) {
+    //  margin-bottom: 0;
+    //  width: 50%;
+    //}
 
-/* Teaser representing a target group. */
-.teaser--group {
+    &-inner {
 
-  //@include breakpoint(650px) {
-  //  margin-bottom: 0;
-  //  width: 50%;
-  //}
+      @include strip-link-styles($white);
 
-  &-inner {
+      // Change text background transparency when hovering on the teaser.
+      // State class names are fetched from taxonomy terms, thus Danish ...
+      &:hover .teaser--group-text {
+        &.is-dagtilbud {
+          @include background-set-color('daycare', 1);
+        }
 
-    @include strip-link-styles($white);
+        &.is-grundskole {
+          @include background-set-color('school', 1);
+        }
 
-    // Change text background transparency when hovering on the teaser.
-    // State class names are fetched from taxonomy terms, thus Danish ...
-    &:hover .teaser--group-text {
+        &.is-ungdomsuddannelse {
+          @include background-set-color('youth', 1);
+        }
+
+        &.is-course {
+          @include background-set-color('course', 1);
+        }
+      }
+    }
+
+    &-text {
+      height: 90px;
+
       &.is-dagtilbud {
-        @include background-set-color('daycare', 1);
+        @include background-set-color('daycare', 0.7);
       }
 
       &.is-grundskole {
-        @include background-set-color('school', 1);
+        @include background-set-color('school', 0.7);
       }
 
       &.is-ungdomsuddannelse {
-        @include background-set-color('youth', 1);
+        @include background-set-color('youth', 0.7);
       }
 
       &.is-course {
-        @include background-set-color('course', 1);
+        @include background-set-color('course', 0.7);
       }
     }
   }
 
-  &-text {
-    height: 90px;
 
-    &.is-dagtilbud {
-      @include background-set-color('daycare', 0.7);
-    }
-
-    &.is-grundskole {
-      @include background-set-color('school', 0.7);
-    }
-
-    &.is-ungdomsuddannelse {
-      @include background-set-color('youth', 0.7);
-    }
-
-    &.is-course {
-      @include background-set-color('course', 0.7);
-    }
+  // Header above a list of teaser.
+  .teaser--content-header {
+    background-color: $gray-lightest;
   }
-}
 
 
-// Header above a list of teaser.
-.teaser--content-header {
-  background-color: $gray-lightest;
-}
+  // Teaser display.
+  .teaser {
+    @extend %teaser--wrapper;
 
+    background: $white; // For news.
 
-// Teaser display.
-.teaser {
-  @extend %teaser--wrapper;
+  }
 
-  background: $white; // For news.
+  .teaser--list {
+    &__fullwidth {
+      display: block;
 
-}
-
-.teaser--list {
-  &__fullwidth {
-    display: block;
-
-    .teaser {
-      margin-bottom: 0;
+      .teaser {
+        margin-bottom: 0;
+      }
     }
   }
-}
 
 
-.teaser--list-button {
-  @extend .button;
+  .teaser--list-button {
+    @extend .button;
 
-  margin: 0 auto; // Center buttons.
-}
-
-
-/* Default file: patterns/_ribbon.scss
-================================================================================================================== */
-.is-dagtilbud {
-  .ribbon {
-    @include background-set-color('daycare', 1);
+    margin: 0 auto; // Center buttons.
   }
-}
 
-.is-grundskole {
-  .ribbon {
-    @include background-set-color('school', 1);
+
+  /* Default file: patterns/_ribbon.scss
+  ================================================================================================================== */
+  .is-dagtilbud {
+    .ribbon {
+      @include background-set-color('daycare', 1);
+    }
   }
-}
 
-.is-ungdomsuddannelse {
-  .ribbon {
-    @include background-set-color('youth', 1);
+  .is-grundskole {
+    .ribbon {
+      @include background-set-color('school', 1);
+    }
   }
-}
 
-.ribbon a,
-.ribbon a:hover {
-  /* Set the text properties */
-  color: $white;
-  text-decoration: none;
-  border-color: #fff;
-  border-color: rgba(255, 255, 255, 0.7);
+  .is-ungdomsuddannelse {
+    .ribbon {
+      @include background-set-color('youth', 1);
+    }
+  }
+
+  .ribbon a,
+  .ribbon a:hover {
+    /* Set the text properties */
+    color: $white;
+    text-decoration: none;
+    border-color: #fff;
+    border-color: rgba(255, 255, 255, 0.7);
+  }
 }

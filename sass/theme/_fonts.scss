@@ -1,0 +1,27 @@
+/**
+ *
+ * Font definitions
+ *
+ * Should contain definitions for all font-families used on the site
+ *
+ */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+@font-face {
+  font-family: 'Asap';
+  src: url('../fonts/Asap-Regular.ttf'); /* Pretty Modern Browsers */
+}
+
+@font-face {
+  font-family: 'Asap';
+  src: url('../fonts/Asap-Bold.ttf'); /* Pretty Modern Browsers */
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Asap';
+  src: url('../fonts/Asap-Italic.ttf'); /* Pretty Modern Browsers */
+  font-style: italic;
+}
