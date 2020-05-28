@@ -140,7 +140,7 @@ a {
       }
     }
 
-    .&--light {
+    &--light {
       background: $block-light;
 
       a {
@@ -156,7 +156,7 @@ a {
       }
     }
 
-    .&--newsletter.is-front .form-type-emailfield {
+    &--newsletter.is-front .form-type-emailfield {
       & > input {
         margin-bottom: $boxlist-padding;
       }
@@ -170,9 +170,7 @@ a {
   ================================================================================================================== */
 
   .header {
-    //background: url(../images/header-bg.png) repeat-x 0 0;
-    background: none;
-    background-color: $header-color;
+    background: $header-color url(../images/header-bg.png) no-repeat center top;
     height: 85px;
 
     @include breakpoint(45em) {
@@ -456,4 +454,3 @@ a {
     border-color: #fff;
     border-color: rgba(255, 255, 255, 0.7);
   }
-}
