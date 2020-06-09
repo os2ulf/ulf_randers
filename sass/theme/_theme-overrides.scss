@@ -170,18 +170,31 @@ a {
   ================================================================================================================== */
 
   .header {
-    background: $header-color url(../images/header-bg.png) no-repeat center top;
     height: 85px;
+    background: $header-color;
 
     @include breakpoint(45em) {
       height: 160px;
+      background-image: url(../images/header-bg.png);
+      background-repeat: no-repeat;
+      background-position: center top;
     }
 
     &--toggle-mobile-nav {
       background: none;
     }
-  }
 
+    &--logo-image {
+      height: 60px;
+      position: relative;
+      left: 2px;
+
+      @include breakpoint(45em) {
+        height: auto;
+        left: 0px;
+      }
+    }
+  }
 
   /* Default file: modules/_search.scss
   ================================================================================================================== */
