@@ -140,7 +140,7 @@ a {
       }
     }
 
-    .&--light {
+    &--light {
       background: $block-light;
 
       a {
@@ -156,7 +156,7 @@ a {
       }
     }
 
-    .&--newsletter.is-front .form-type-emailfield {
+    &--newsletter.is-front .form-type-emailfield {
       & > input {
         margin-bottom: $boxlist-padding;
       }
@@ -170,20 +170,31 @@ a {
   ================================================================================================================== */
 
   .header {
-    //background: url(../images/header-bg.png) repeat-x 0 0;
-    background: none;
-    background-color: $header-color;
     height: 85px;
+    background: $header-color;
 
     @include breakpoint(45em) {
       height: 160px;
+      background-image: url(../images/header-bg.png);
+      background-repeat: no-repeat;
+      background-position: center top;
     }
 
     &--toggle-mobile-nav {
       background: none;
     }
-  }
 
+    &--logo-image {
+      height: 60px;
+      position: relative;
+      left: 2px;
+
+      @include breakpoint(45em) {
+        height: auto;
+        left: 0px;
+      }
+    }
+  }
 
   /* Default file: modules/_search.scss
   ================================================================================================================== */
@@ -455,5 +466,14 @@ a {
     text-decoration: none;
     border-color: #fff;
     border-color: rgba(255, 255, 255, 0.7);
+  }
+
+/* Default file: modules/_paragraphs.scss
+================================================================================================================== */
+
+.entity-paragraphs-item {
+  .btn {
+    @extend %button;
+    @include strip-link-styles($white);
   }
 }
