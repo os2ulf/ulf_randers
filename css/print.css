@@ -79,25 +79,25 @@ a {
     width: 100%;
 }
 
-.field--image img{
-    border-bottom: 5px solid #17858c;
-}
+/*.field--image img{*/
+/*    border-bottom: 5px solid #17858c;*/
+/*}*/
 
-.is-dagtilbud  .field--image img{
-    border-bottom: 5px solid #49C5B1;
-}
+/*.is-dagtilbud  .field--image img{*/
+/*    border-bottom: 5px solid #49C5B1;*/
+/*}*/
 
-.is-grundskole .field--image img {
-    border-bottom: 5px solid #FAE100;
-}
+/*.is-grundskole .field--image img {*/
+/*    border-bottom: 5px solid #FAE100;*/
+/*}*/
 
-.is-ungdomsuddannelse .field--image img {
-    border-bottom: 5px solid #1B365D;
-}
+/*.is-ungdomsuddannelse .field--image img {*/
+/*    border-bottom: 5px solid #1B365D;*/
+/*}*/
 
-.is-course .field--image img {
-    border-bottom: 5px solid #71C5E8;
-}
+/*.is-course .field--image img {*/
+/*    border-bottom: 5px solid #71C5E8;*/
+/*}*/
 
 /* Elements */
 .field--image img {
