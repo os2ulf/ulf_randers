@@ -7,7 +7,7 @@
  */
 
 /* Fetch default print styles */
-@import url("../../ulf_default/css/custom-styles.css");
+@import url("../../../../../profiles/ulf/themes/ulf_default/css/custom-styles.css");
 
 @font-face {
     font-family: 'Asap';
@@ -37,7 +37,7 @@ body {
 
 /* Logo display. */
 .print-logo {
-    background: url("../images/header-bg.jpg");
+    background-color: #1B365D;
 }
 
 .print-logo img{
@@ -74,50 +74,30 @@ a {
 }
 
 .content--image {
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     position: relative;
     width: 100%;
 }
 
-.field--image img{
-    border-bottom: 5px solid #17858c;
-}
+/*.field--image img{*/
+/*    border-bottom: 5px solid #17858c;*/
+/*}*/
 
-.is-dagtilbud  .field--image img{
-    border-bottom: 5px solid #a4da20;
-}
+/*.is-dagtilbud  .field--image img{*/
+/*    border-bottom: 5px solid #49C5B1;*/
+/*}*/
 
-.is-grundskole .field--image img {
-    border-bottom: 5px solid #901d7c;
-}
+/*.is-grundskole .field--image img {*/
+/*    border-bottom: 5px solid #FAE100;*/
+/*}*/
 
-.is-ungdomsuddannelse .field--image img {
-    border-bottom: 5px solid #ff6800;
-}
+/*.is-ungdomsuddannelse .field--image img {*/
+/*    border-bottom: 5px solid #1B365D;*/
+/*}*/
 
-.is-course .field--image img {
-    border-bottom: 5px solid #edd71c;
-}
-
-
-.field--title {
-    position: absolute;
-    font-size: 30px;
-    bottom: 0;
-}
-
-.content--main {
-    float: left;
-    position: relative;
-    width: 50%;
-}
-
-.content--meta {
-    float: right;
-    position: relative;
-    width: 45%;
-}
-
+/*.is-course .field--image img {*/
+/*    border-bottom: 5px solid #71C5E8;*/
+/*}*/
 
 /* Elements */
 .field--image img {
@@ -131,18 +111,20 @@ a {
 /* Blocks */
 
 .block--light {
-    background: #deeced;
+    background: #CCCCCC;
     display: block;
     margin-bottom: 10px;
     padding: 20px;
+    page-break-inside: avoid;
 }
 
 .block--dark {
-    background: #17858c;
+    background: #808080;
     color: #fff;
     display: block;
     margin-bottom: 20px;
     padding: 20px;
+    page-break-inside: avoid;
 }
 
 .block--dark .is-full-width {
@@ -174,13 +156,11 @@ a {
 }
 
 .is-inline .block--field-label {
-    float: left;
-    width: 50%;
+    width: 100%;
 }
 
 .is-inline .block--field-text {
-    float: left;
-    width: 50%;
+    width: 100%;
 }
 
 .block--field-text {
@@ -201,7 +181,7 @@ a {
 
 .field--collection-label {
     color: white;
-    background: #17858c;
+    background: #1B365D;
     padding: 10px;
 }
 
@@ -227,3 +207,14 @@ a {
 .field--collection-description {
     font-weight: bold;
 }
+
+.is-modal.is-visible {
+  display: none;
+}
+/**
+ * World targets
+ */
+.world-targets {display: block;padding: 0;height: 100px;margin-top: 20px;margin-bottom: -20px;}
+.world-target {margin: 0;display: inline-block;padding: 0 10px 0 0;height: 100px;width: 100px;}
+.world-target a {display: block;}
+.world-target a img {height: 100px;width: 100px;}
